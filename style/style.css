@@ -65,29 +65,49 @@ body {
 	background-color: #682a2a;
 	cursor: pointer;
 }
-.modal-basket {
+.cart-block {
 	position: absolute;
 	top: 110px;
 	right: 100px;
 	background-color: #98c0aa;
 	padding: 20px;
-}
-.table {
-	width: 100%;
+	width: 300px;
 	text-align: center;
 }
-.table td {
-	padding: 10px;
+.cart-block p {
+	text-transform: uppercase;
+	font-size: 15px;
+	letter-spacing: 1px;
 }
-.table td img {
-	width: 50px;
-	height: 50px;
+.cart-item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0px 0px 20px 0px;
 }
-.table i {
+.cart-item:last-child {
+	margin: 0;
+}
+.product-block {
+	display: flex;
+	align-items: center;
+}
+.product-block img {
+	display: block;
+	width: 60px;
+	height: 70px;
+	margin: 0px 20px 0px 0px;
+}
+.price-block {
+	display: flex;
+	text-align: center;
+	margin: 0px 0px 0px 20px;
+}
+.product-price {
+	margin: 0px 20px 0px 0px;
+}
+.fa-trash {
 	cursor: pointer;
-}
-.summa {
-	font-weight: 600;
 }
 .products {
 	display: flex;

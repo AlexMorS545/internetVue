@@ -13,62 +13,25 @@
 	<header class="top-header container">
 		<div class="logo">E-shop</div>
 		<div class="search-wrp">
-			<form action="#" class="search-form">
-				<input type="text" class="search-field" v-model="searchLine">
-				<button @click="filtered()" class="btn-search" type="submit">
-					<i class="fas fa-search"></i>
+			<!-- <form action="#" class="search-form" @submit.prevent="filtered">
+				<input type="text" class="search-field" v-model="userSearch">
+				<button type="submit" class="btn-search">
+						<i class="fas fa-search"></i>
 				</button>
-			</form>
+			</form> -->
+			<search></search>
 		</div>
-		<button @click="show=!show" class="btn-cart" type="button">Корзина</button>
-		<div v-if = "show" class="modal-basket">
-			<table class="table">
-				<thead>
-					<tr>
-						<th scope="col">ID</th>
-						<th scope="col">Картинка</th>
-						<th scope="col">Имя</th>
-						<th scope="col">Цена</th>
-						<th scope="col">Кол-во</th>
-						<th scope="col">цена</i></th>
-						<th scope="col">Удалить</i></th>
-					</tr>
-				</thead>
-				<tbody class="table-body">
-					<tr class="cart-item" :data-id="product.id_product" v-for="product of products" :key="product.id_product">
-						<th scope="row">{{ product.id_product }}</th>
-						<td><img :src="`img/${product.product_name}.jpg`" alt="photo product"></td>
-						<td>{{ product.product_name }}</td>
-						<td>{{ product.product_price }}</td>
-						<td>{{ product.quantity }}</td>
-						<td>{{ product.quantity * product.product_price }}</td>
-						<td><i :data-id="`${product.id_product}`" class="fas fa-trash" @click="removeProduct(product)"></i></td>
-					</tr>
-				</tbody>
-				<tfoot>
-					<tr>
-						<th colspan="2" scope="row">Итог:</th>
-						<td colspan="3">
-							<span class="summa">{{ this.summa }}</span>
-							<span class="sum-name">&#36;</span>
-						</td>
-					</tr>
-				</tfoot>
-			</table>
-		</div>
+		<button @click="showCart=!showCart" class="btn-cart" type="button">Корзина</button>
+		<cart :cart-items="cartItems" :img="imgCart" :visibility="showCart" @remove="removeProduct"></cart>
 	</header>
 	<main class="main container">
-		<div class="products">
-			<div class="product-item" v-for="product of filterProducts" :key="product.id_product">
-				<img :src="`img/${product.product_name}.jpg`" alt="photo product">
-				<h3>{{ product.product_name }}</h3>
-				<p>{{ product.product_price }}&#36;</p>
-				<button class="buy-btn" @click="addProduct(product)">Купить</button>
-			</div>
-		</div>
+		<products :products="filterProducts" :img="imgCatalog" @add-product="addProduct"></products>
 	</main>
 </div>
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="./js/SearchComponent.js"></script>
+	<script src="./js/ProductComponent.js"></script>
+	<script src="./js/CartComponent.js"></script>
 	<script src="./js/main.js"></script>
 </body>
 </html>
