@@ -13,13 +13,12 @@
 	<header class="top-header container">
 		<div class="logo">E-shop</div>
 		<div class="search-wrp">
-			<!-- <form action="#" class="search-form" @submit.prevent="filtered">
-				<input type="text" class="search-field" v-model="userSearch">
+			<form action="#" class="search-form" @submit.prevent="filtered">
+				<search v-model="userSearch"></search>
 				<button type="submit" class="btn-search">
 						<i class="fas fa-search"></i>
 				</button>
-			</form> -->
-			<search></search>
+			</form>
 		</div>
 		<button @click="showCart=!showCart" class="btn-cart" type="button">Корзина</button>
 		<cart :cart-items="cartItems" :img="imgCart" :visibility="showCart" @remove="removeProduct"></cart>
