@@ -1,0 +1,23 @@
+{
+  "name": "internetVue",
+  "version": "1.0.0",
+  "description": "Internet shop on framework Vue.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexMorS545/internetVue.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexMorS545/internetVue/issues"
+  },
+  "homepage": "https://github.com/AlexMorS545/internetVue#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

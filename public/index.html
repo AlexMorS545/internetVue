@@ -13,24 +13,21 @@
 	<header class="top-header container">
 		<div class="logo">E-shop</div>
 		<div class="search-wrp">
-			<form action="#" class="search-form" @submit.prevent="filtered">
-				<search v-model="userSearch"></search>
-				<button type="submit" class="btn-search">
-						<i class="fas fa-search"></i>
-				</button>
-			</form>
+			<search></search>
 		</div>
-		<button @click="showCart=!showCart" class="btn-cart" type="button">Корзина</button>
-		<cart :cart-items="cartItems" :img="imgCart" :visibility="showCart" @remove="removeProduct"></cart>
+		<cart ref="cart"></cart>
 	</header>
 	<main class="main container">
-		<products :products="filterProducts" :img="imgCatalog" @add-product="addProduct"></products>
+		<error ref="error"></error>
+		<products ref="products"></products>
 	</main>
 </div>
-	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-	<script src="./js/SearchComponent.js"></script>
+	<!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 	<script src="./js/ProductComponent.js"></script>
 	<script src="./js/CartComponent.js"></script>
+	<script src="./js/SearchComponent.js"></script>
+	<script src="./js/ErrorComp.js"></script>
 	<script src="./js/main.js"></script>
 </body>
 </html>
