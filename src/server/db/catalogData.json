@@ -1,0 +1,50 @@
+[
+	{
+		"id_product": 1,
+		"product_name": "Круги",
+		"product_price": 2000,
+		"image": "img/imgProd/1.jpg"
+	},
+	{
+		"id_product": 2,
+		"product_name": "Цветы",
+		"product_price": 20,
+		"image": "img/imgProd/2.jpg"
+	},
+	{
+		"id_product": 3,
+		"product_name": "Узоры",
+		"product_price": 200,
+		"image": "img/imgProd/3.jpg"
+	},
+	{
+		"id_product": 4,
+		"product_name": "Волны",
+		"product_price": 50,
+		"image": "img/imgProd/4.jpg"
+	},
+	{
+		"id_product": 5,
+		"product_name": "Переливы",
+		"product_price": 50,
+		"image": "img/imgProd/5.jpg"
+	},
+	{
+		"id_product": 6,
+		"product_name": "Спокойствие",
+		"product_price": 50,
+		"image": "img/imgProd/6.jpg"
+	},
+	{
+		"id_product": 7,
+		"product_name": "Радуга",
+		"product_price": 50,
+		"image": "img/imgProd/7.jpg"
+	},
+	{
+		"id_product": 8,
+		"product_name": "Зима",
+		"product_price": 50,
+		"image": "img/imgProd/8.jpg"
+	}
+]
