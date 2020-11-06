@@ -1,7 +1,4 @@
-import appMain from './js/main'
-/* import './css/normalize.css'
-import './css/style.css'
-import './img'
-import './fonts/Neucha-Regular.ttf' */
+import appMain from '@public/js/main'
+import '@public/css/style.css'
 
 const app = new Vue(appMain);

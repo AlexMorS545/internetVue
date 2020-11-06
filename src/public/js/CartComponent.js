@@ -1,20 +1,19 @@
 const cartItem = {
 	props: ['img', 'cartItem'],
 	template: `<div class="cart-item">
-					<div class="product-block">
-							<img :src="img" alt="Some img">
-							<div class="product-desc">
-									<div class="product-title">{{ cartItem.product_name }}</div>
-									<div class="product-quantity">Кол-во: {{ cartItem.quantity }}</div>
-									<div class="product-single-price">$ {{ cartItem.product_price }}</div>
-							</div>
-					</div>
-					<div class="price-block">
-							<div class="product-price">{{cartItem.quantity*cartItem.product_price}} $</div>
-							<i class="fas fa-trash" @click="$emit('remove', cartItem)"></i>
-					</div>
-				</div>
-	`
+								<div class="product-block">
+										<img :src="img" alt="Some img">
+										<div class="product-desc">
+												<div class="product-title">{{ cartItem.product_name }}</div>
+												<div class="product-quantity">Кол-во: {{ cartItem.quantity }}</div>
+												<div class="product-single-price">$ {{ cartItem.product_price }}</div>
+										</div>
+								</div>
+								<div class="price-block">
+										<div class="product-price">{{cartItem.quantity*cartItem.product_price}} $</div>
+										<i class="fas fa-trash" @click="$emit('remove', cartItem)"></i>
+								</div>
+							</div>`
 };
 const cart = {
 	data() {
@@ -73,15 +72,14 @@ const cart = {
 			}
 		},
 	},
-	template: `
-		<div>
-			<button @click="showCart=!showCart" class="btn-cart" type="button"><i class="fas fa-shopping-cart"></i></button>
-			<div class="cart-block" v-show="showCart">
-				<p class="cart-empty" v-if="!cartItems.length">Ваша корзина пуста</p>
-				<cart-item v-for="item of cartItems" :key="item.id_product" :img="item.image" :cart-item="item" @remove="remove">
-				</cart-item>
-			</div>
-		</div>
-	`
+	template: `<div>
+								<button @click="showCart=!showCart" class="btn-cart" type="button"><i class="fas fa-shopping-cart"></i></button>
+								<div class="cart-block" v-show="showCart">
+									<cart-item v-for="item of cartItems" :key="item.id_product" :img="item.image" :cart-item="item" @remove="remove">
+									</cart-item>
+									<p class="cart-empty" v-if="!cartItems.length">Ваша корзина пуста</p>
+									<button class="buy-btn cart-button" v-else="cartItems.length">Заказать</button>
+								</div>
+							</div>`
 };
 export default cart

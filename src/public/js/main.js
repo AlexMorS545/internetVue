@@ -19,7 +19,6 @@ const app = {
 			return fetch(url)
 				.then(result => result.json())
 				.catch(error => {
-					// console.log(error)
 					this.$refs.error.text = error;
 				})
 		},
@@ -47,7 +46,6 @@ const app = {
 			})
 				.then(result => result.json())
 				.catch(error => {
-					// console.log(error)
 					this.$refs.error.text = error;
 				})
 		},
