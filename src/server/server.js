@@ -4,11 +4,11 @@ const app = express();
 const cart = require('./cartRouter');//обработчик всех запросов корзины
 
 app.use(express.json());
-app.use('/', express.static('src/public'));
+app.use('/', express.static('dist'));
 app.use('/api/cart', cart);
 
 app.get('/api/products', (req, res) => {
-	fs.readFile('src/server/db/catalogData.json', 'utf-8', (err, data) => {
+	fs.readFile('dist/server/db/catalogData.json', 'utf-8', (err, data) => {
 		if(err){
 			res.sendStatus(404, JSON.stringify({result:0, text: err}));
 		} else {

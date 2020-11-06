@@ -1,0 +1,14 @@
+{
+    "result": 1,
+    "amount": 2270,
+    "countProducts": 4,
+    "contents": [
+        {
+            "quantity": 2,
+            "id_product": 3,
+            "product_name": "Узоры",
+            "product_price": 200,
+            "image": "public/img/imgProd/3.jpg"
+        }
+    ]
+}

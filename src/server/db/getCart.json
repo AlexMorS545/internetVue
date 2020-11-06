@@ -8,7 +8,7 @@
             "id_product": 3,
             "product_name": "Узоры",
             "product_price": 200,
-            "image": "img/imgProd/3.jpg"
+            "image": "public/img/imgProd/3.jpg"
         }
     ]
 }
